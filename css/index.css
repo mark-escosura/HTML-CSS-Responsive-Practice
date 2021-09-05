@@ -62,6 +62,7 @@ h1, h2, h3 {
 	font-family: 'Oxygen', sans-serif;
     color: #266035;
 	letter-spacing: 3px;
+	text-align: center;
 }
 
 h1 {
@@ -87,11 +88,20 @@ a {
 	text-decoration: none;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1.8rem;
+	color: #266035;
 }
 
 section, footer {
 	padding: 4% 0;
 }
+
+/* Helper Classes */
+
+.bg-img{
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 
 /* Header Section Styles */
 
@@ -117,13 +127,6 @@ nav {
 	justify-content: space-evenly;
 }
 
-/* Helper Classes */
-
-.bg-img{
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
 /* Home Section Styles */
 
 #home{
@@ -134,4 +137,37 @@ nav {
 	background-image:url(../images/header.jpg);
 	text-align: center;
 	background-position: bottom;
+}
+
+#home button{
+	color: #266035;
+	border: 2px solid #266035;
+}
+
+/* About Section Styles */
+
+#about {
+	background-image:url("../images/about-img.jpg");
+	background-position: center;
+	height:80vh;
+	display:flex;
+	justify-content: flex-end;
+	align-items:center;
+}
+
+#about div{
+	width:22%;
+	margin-right: 10%;
+}
+
+#about div {
+	width:22%;
+	margin-right: 10%;
+}
+
+/* Shop Section Styles */
+
+.container {
+	display:flex;
+	flex-wrap: wrap;
 }
