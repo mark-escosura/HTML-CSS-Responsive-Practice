@@ -1,0 +1,380 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+/* CSS Reset Ends Here */
+
+
+/* Universal Selector */
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    /* border:1px solid grey; */
+	padding: 0;
+	margin: 0;
+
+}
+
+/* General Styles Goes Here */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+	font-size: 1.8rem;
+    line-height: 1.5;
+	color: #4f4f4f;
+    font-family: 'Source Sans Pro', sans-serif;
+	background-color: #FBFFFB;
+}
+
+h1, h2, h3 {
+	font-family: 'Oxygen', sans-serif;
+    color: #266035;
+	letter-spacing: 3px;
+	text-align: center;
+}
+
+h1 {
+	font-size:5rem;
+    color: #FBFFFB;
+
+}
+
+h2 {
+	font-size: 3.5rem;
+	margin-bottom: 5%;
+}
+
+h3 {
+	font-size: 2.5rem;
+}
+
+button {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.8rem;
+	padding: 3% 5%;
+	margin-top: 5%;
+}
+
+a {
+	text-decoration: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.8rem;
+	color: #266035;
+}
+
+section, footer {
+	padding: 4% 0;
+}
+
+/* Helper Classes */
+
+.bg-img{
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+/* Header Section Styles */
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color:rgba(255, 255, 255, 0.8);
+	z-index:999;
+	padding: 1% 0;
+}
+
+.logo {
+	width: 5%;
+}
+
+.links {
+	width: 50%;
+	display:flex;
+	justify-content: space-evenly;
+}
+
+/* Home Section Styles */
+
+#home{
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image:url(../images/header.jpg);
+	text-align: center;
+	background-position: bottom;
+}
+
+#home button{
+	color: #266035;
+	border: 2px solid #266035;
+}
+
+#home button:hover {
+	color:#fff;
+	background-color: #266035;
+}
+
+/* About Section Styles */
+
+#about {
+	background-image:url("../images/about-img.jpg");
+	background-position: center;
+	height:80vh;
+	display:flex;
+	justify-content: flex-end;
+	align-items:center;
+}
+
+#about div{
+	width:22%;
+	margin-right: 10%;
+}
+
+/* Shop Section Styles */
+#shop {
+	padding-bottom: 0%;
+}
+
+.container {
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.text, .succulents, .tropics, .cacti {
+	width:50%;
+}
+
+.text {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+	padding: 4%;
+}
+
+.text div {
+	width:50%;
+}
+
+.text button {
+	background-color: #266035;
+	color: #fff;
+	margin-left: 25%;
+}
+
+.cacti {
+	background-image:url('../images/cacti.jpg');
+	background-position: bottom;
+}
+
+.succulents {
+	background-image:url('../images/succulants.jpg');
+	background-position: bottom;
+}
+
+.tropics {
+	background-image:url('../images/tropicals.jpg');
+	background-position: top;
+}
+
+/* Footer Section Styles */
+
+footer {
+	background-color: #266035;
+	display:flex;
+	flex-wrap:wrap;
+	color:#fff;
+}
+
+footer h2 {
+	color: #fff;
+	width: 100%;
+}
+
+.left, .right {
+	width: 50%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.right img {
+	width: 50%;
+}
+
+.left div {
+	line-height: 2.3;
+	width: 50%;
+}
+
+footer h3 {
+	color: #fff;
+	text-align:left;
+}
+
+address {
+	margin-top: 5%;
+}
+
+footer a {
+	color:#Fff;
+}
+
+.copyright {
+	width:100%;
+	text-align: right;
+}
+
+.copyright p {
+	margin-right: 3%;
+	margin-top: 5%;
+}
+
+/* Responsive Design */
+/*
+2 things needed to make a website responsive.
+1. you need a viewport meta tag in the head of your HTML doc
+2. Media Queries - rules that we right that apply to specific screen sizes
+
+if we are designing desktop first and scaling down to smallers screens we use max-width
+if we are designing mobile first and we are scaling up to larger screens we use min-width
+
+*/
+
+/* Media Queries */
+/* Tablet */
+@media (max-width:800px){
+/* when the screen size reaches 800px or smaller, apply these styles */
+	#about {
+		height: 90vh;
+		background-position: right;
+	}	
+
+	#about div {
+		width:30%;
+		margin-right: 5%;
+		}
+	.text div {
+		width:65%;
+	}
+}
+/* Phone */
+@media (max-width:500px){
+	/* when the screen size reaches 500px or smaller apply these styles */
+	nav {
+		flex-direction: column;
+	}
+	.logo {
+		width: 10%;
+	}
+	.links {
+		width: 90%;
+	}
+	#about {
+		background-image:none;
+		background-color: #dddee0;
+		height:auto;
+		justify-content: center;
+		text-align:center;
+	}
+	#about div {
+		width:90%;
+		margin-right: 0;
+	}
+	.container {
+		justify-content: center;
+	}
+	.text, .succulents, .cacti, .tropics {
+		width: 90%;
+	}
+	.succulents, .tropics, .cacti {
+		height: 50vh;
+	}
+
+	.one {
+		order: 1;
+	}
+	.two {
+		order:2;
+	}
+	.three {
+		order:3;
+	}
+	.four {
+		order:4;
+	}
+	.five {
+		order:5;
+	}
+	.six {
+		order:6;
+	}
+	footer {
+		justify-content: center;
+		align-items:center;
+	}
+	footer h2 {
+		width:30%;
+		flex-wrap: wrap;
+	}
+	.left, .right {
+		width:90%;
+	}
+	.left div {
+		line-height: 2;
+	}
+	footer h2 {
+		order:-2;
+	}
+	.right {
+		order:-1;
+	}
+	.right img {
+		width: 70%;
+	}
+	.copyright {
+		text-align: center;
+	}
+	.copyright p {
+		margin-right: 0;
+	}
+
+}
